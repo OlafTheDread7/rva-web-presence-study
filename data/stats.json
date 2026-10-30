@@ -1,0 +1,552 @@
+{
+  "run": {
+    "places_enabled": true,
+    "pagespeed_enabled": false,
+    "elapsed_s": 1620.8,
+    "audited": 2500,
+    "run_date": "2026-08-25",
+    "report_year": "2026"
+  },
+  "sample": {
+    "population_total": 46543,
+    "eligible_total": 43469,
+    "excluded_total": 3074,
+    "excluded_by_reason": {
+      "HOLDINGS": 713,
+      "FOUNDATION": 640,
+      "CHURCH": 284,
+      "HOMEOWNERS": 306,
+      "HOLDING CO": 37,
+      "OWNERS ASSOCIATION": 145,
+      "CONDOMINIUM": 204,
+      "MINISTRIES": 147,
+      "MINISTRY": 49,
+      "PROPERTY OWNERS": 33,
+      "HOA": 7,
+      "CONDO ASSOCIATION": 1,
+      "PARISH": 1,
+      "PROPERTIES LLC": 506,
+      "FAMILY TRUST": 1
+    },
+    "sample_size": 2500,
+    "seed": 20260825,
+    "sample_by_locality": {
+      "Richmond": 899,
+      "Hanover": 220,
+      "Henrico": 679,
+      "Chesterfield": 702
+    },
+    "population_by_locality": {
+      "Richmond": 16737,
+      "Henrico": 12453,
+      "Chesterfield": 13149,
+      "Hanover": 4204
+    }
+  },
+  "sectors": {
+    "reportable": {
+      "Personal Care & Beauty": {
+        "n": 33,
+        "live_n": 19,
+        "no_website": {
+          "label": "No website \u2014 Personal Care & Beauty",
+          "count": 12,
+          "base": 33,
+          "pct": 36.4,
+          "ci_low": 22.2,
+          "ci_high": 53.4,
+          "margin": 15.6,
+          "note": ""
+        },
+        "no_schema": {
+          "label": "No Schema.org \u2014 Personal Care & Beauty",
+          "count": 4,
+          "base": 19,
+          "pct": 21.1,
+          "ci_low": 8.5,
+          "ci_high": 43.3,
+          "margin": 17.4,
+          "note": ""
+        },
+        "no_llms": {
+          "label": "No llms.txt \u2014 Personal Care & Beauty",
+          "count": 12,
+          "base": 19,
+          "pct": 63.2,
+          "ci_low": 41.0,
+          "ci_high": 80.9,
+          "margin": 20.0,
+          "note": ""
+        },
+        "few_reviews": {
+          "label": "Under 10 reviews \u2014 Personal Care & Beauty",
+          "count": 6,
+          "base": 33,
+          "pct": 18.2,
+          "ci_low": 8.6,
+          "ci_high": 34.4,
+          "margin": 12.9,
+          "note": ""
+        }
+      },
+      "Home & Construction": {
+        "n": 51,
+        "live_n": 34,
+        "no_website": {
+          "label": "No website \u2014 Home & Construction",
+          "count": 17,
+          "base": 51,
+          "pct": 33.3,
+          "ci_low": 22.0,
+          "ci_high": 47.0,
+          "margin": 12.5,
+          "note": ""
+        },
+        "no_schema": {
+          "label": "No Schema.org \u2014 Home & Construction",
+          "count": 15,
+          "base": 34,
+          "pct": 44.1,
+          "ci_low": 28.9,
+          "ci_high": 60.5,
+          "margin": 15.8,
+          "note": ""
+        },
+        "no_llms": {
+          "label": "No llms.txt \u2014 Home & Construction",
+          "count": 26,
+          "base": 34,
+          "pct": 76.5,
+          "ci_low": 60.0,
+          "ci_high": 87.6,
+          "margin": 13.8,
+          "note": ""
+        },
+        "few_reviews": {
+          "label": "Under 10 reviews \u2014 Home & Construction",
+          "count": 25,
+          "base": 51,
+          "pct": 49.0,
+          "ci_low": 35.9,
+          "ci_high": 62.3,
+          "margin": 13.2,
+          "note": ""
+        }
+      },
+      "Health & Medical": {
+        "n": 62,
+        "live_n": 44,
+        "no_website": {
+          "label": "No website \u2014 Health & Medical",
+          "count": 18,
+          "base": 62,
+          "pct": 29.0,
+          "ci_low": 19.2,
+          "ci_high": 41.3,
+          "margin": 11.0,
+          "note": ""
+        },
+        "no_schema": {
+          "label": "No Schema.org \u2014 Health & Medical",
+          "count": 14,
+          "base": 44,
+          "pct": 31.8,
+          "ci_low": 20.0,
+          "ci_high": 46.6,
+          "margin": 13.3,
+          "note": ""
+        },
+        "no_llms": {
+          "label": "No llms.txt \u2014 Health & Medical",
+          "count": 39,
+          "base": 44,
+          "pct": 88.6,
+          "ci_low": 76.0,
+          "ci_high": 95.0,
+          "margin": 9.5,
+          "note": ""
+        },
+        "few_reviews": {
+          "label": "Under 10 reviews \u2014 Health & Medical",
+          "count": 39,
+          "base": 62,
+          "pct": 62.9,
+          "ci_low": 50.5,
+          "ci_high": 73.8,
+          "margin": 11.6,
+          "note": ""
+        }
+      },
+      "Professional Services": {
+        "n": 83,
+        "live_n": 60,
+        "no_website": {
+          "label": "No website \u2014 Professional Services",
+          "count": 23,
+          "base": 83,
+          "pct": 27.7,
+          "ci_low": 19.2,
+          "ci_high": 38.2,
+          "margin": 9.5,
+          "note": ""
+        },
+        "no_schema": {
+          "label": "No Schema.org \u2014 Professional Services",
+          "count": 24,
+          "base": 60,
+          "pct": 40.0,
+          "ci_low": 28.6,
+          "ci_high": 52.6,
+          "margin": 12.0,
+          "note": ""
+        },
+        "no_llms": {
+          "label": "No llms.txt \u2014 Professional Services",
+          "count": 45,
+          "base": 60,
+          "pct": 75.0,
+          "ci_low": 62.8,
+          "ci_high": 84.2,
+          "margin": 10.7,
+          "note": ""
+        },
+        "few_reviews": {
+          "label": "Under 10 reviews \u2014 Professional Services",
+          "count": 54,
+          "base": 83,
+          "pct": 65.1,
+          "ci_low": 54.3,
+          "ci_high": 74.4,
+          "margin": 10.1,
+          "note": ""
+        }
+      },
+      "Retail": {
+        "n": 40,
+        "live_n": 28,
+        "no_website": {
+          "label": "No website \u2014 Retail",
+          "count": 11,
+          "base": 40,
+          "pct": 27.5,
+          "ci_low": 16.1,
+          "ci_high": 42.8,
+          "margin": 13.3,
+          "note": ""
+        },
+        "no_schema": {
+          "label": "No Schema.org \u2014 Retail",
+          "count": 9,
+          "base": 28,
+          "pct": 32.1,
+          "ci_low": 17.9,
+          "ci_high": 50.7,
+          "margin": 16.4,
+          "note": ""
+        },
+        "no_llms": {
+          "label": "No llms.txt \u2014 Retail",
+          "count": 15,
+          "base": 28,
+          "pct": 53.6,
+          "ci_low": 35.8,
+          "ci_high": 70.5,
+          "margin": 17.4,
+          "note": ""
+        },
+        "few_reviews": {
+          "label": "Under 10 reviews \u2014 Retail",
+          "count": 16,
+          "base": 40,
+          "pct": 40.0,
+          "ci_low": 26.3,
+          "ci_high": 55.4,
+          "margin": 14.5,
+          "note": ""
+        }
+      },
+      "Real Estate & Property": {
+        "n": 31,
+        "live_n": 23,
+        "no_website": {
+          "label": "No website \u2014 Real Estate & Property",
+          "count": 8,
+          "base": 31,
+          "pct": 25.8,
+          "ci_low": 13.7,
+          "ci_high": 43.2,
+          "margin": 14.8,
+          "note": ""
+        },
+        "no_schema": {
+          "label": "No Schema.org \u2014 Real Estate & Property",
+          "count": 8,
+          "base": 23,
+          "pct": 34.8,
+          "ci_low": 18.8,
+          "ci_high": 55.1,
+          "margin": 18.1,
+          "note": ""
+        },
+        "no_llms": {
+          "label": "No llms.txt \u2014 Real Estate & Property",
+          "count": 17,
+          "base": 23,
+          "pct": 73.9,
+          "ci_low": 53.5,
+          "ci_high": 87.5,
+          "margin": 17.0,
+          "note": ""
+        },
+        "few_reviews": {
+          "label": "Under 10 reviews \u2014 Real Estate & Property",
+          "count": 15,
+          "base": 31,
+          "pct": 48.4,
+          "ci_low": 32.0,
+          "ci_high": 65.2,
+          "margin": 16.6,
+          "note": ""
+        }
+      },
+      "Community & Nonprofit": {
+        "n": 50,
+        "live_n": 37,
+        "no_website": {
+          "label": "No website \u2014 Community & Nonprofit",
+          "count": 12,
+          "base": 50,
+          "pct": 24.0,
+          "ci_low": 14.3,
+          "ci_high": 37.4,
+          "margin": 11.5,
+          "note": ""
+        },
+        "no_schema": {
+          "label": "No Schema.org \u2014 Community & Nonprofit",
+          "count": 17,
+          "base": 37,
+          "pct": 45.9,
+          "ci_low": 31.0,
+          "ci_high": 61.6,
+          "margin": 15.3,
+          "note": ""
+        },
+        "no_llms": {
+          "label": "No llms.txt \u2014 Community & Nonprofit",
+          "count": 25,
+          "base": 37,
+          "pct": 67.6,
+          "ci_low": 51.5,
+          "ci_high": 80.4,
+          "margin": 14.5,
+          "note": ""
+        },
+        "few_reviews": {
+          "label": "Under 10 reviews \u2014 Community & Nonprofit",
+          "count": 38,
+          "base": 50,
+          "pct": 76.0,
+          "ci_low": 62.6,
+          "ci_high": 85.7,
+          "margin": 11.6,
+          "note": ""
+        }
+      }
+    },
+    "below_threshold": {
+      "Auto & Transport": 20,
+      "Food & Hospitality": 15
+    },
+    "unclassified": 189,
+    "min_reportable": 30,
+    "classified_total": 385
+  },
+  "layer1": {
+    "population_total": 46543,
+    "eligible_total": 43469,
+    "sample_size": 2500,
+    "identified_customer_facing": 574,
+    "no_google_presence": 1913
+  },
+  "base_n": 574,
+  "live_sites_n": 377,
+  "metrics": {
+    "no_website": {
+      "label": "No website at all",
+      "count": 190,
+      "base": 574,
+      "pct": 33.1,
+      "ci_low": 29.4,
+      "ci_high": 37.1,
+      "margin": 3.9,
+      "note": "Neither Google Business Profile nor a domain probe found a site."
+    },
+    "social_only": {
+      "label": "Social page instead of a website",
+      "count": 7,
+      "base": 574,
+      "pct": 1.2,
+      "ci_low": 0.6,
+      "ci_high": 2.5,
+      "margin": 0.9,
+      "note": ""
+    },
+    "no_https": {
+      "label": "No valid HTTPS",
+      "count": 35,
+      "base": 377,
+      "pct": 9.3,
+      "ci_low": 6.8,
+      "ci_high": 12.6,
+      "margin": 2.9,
+      "note": ""
+    },
+    "not_mobile": {
+      "label": "No mobile viewport",
+      "count": 30,
+      "base": 377,
+      "pct": 8.0,
+      "ci_low": 5.6,
+      "ci_high": 11.1,
+      "margin": 2.8,
+      "note": ""
+    },
+    "no_schema": {
+      "label": "No Schema.org structured data",
+      "count": 153,
+      "base": 377,
+      "pct": 40.6,
+      "ci_low": 35.7,
+      "ci_high": 45.6,
+      "margin": 4.9,
+      "note": ""
+    },
+    "no_localbusiness": {
+      "label": "No LocalBusiness/Organization schema",
+      "count": 219,
+      "base": 377,
+      "pct": 58.1,
+      "ci_low": 53.1,
+      "ci_high": 63.0,
+      "margin": 4.9,
+      "note": ""
+    },
+    "no_llms_txt": {
+      "label": "No llms.txt",
+      "count": 278,
+      "base": 377,
+      "pct": 73.7,
+      "ci_low": 69.1,
+      "ci_high": 77.9,
+      "margin": 4.4,
+      "note": ""
+    },
+    "blocks_ai": {
+      "label": "Blocks at least one AI crawler",
+      "count": 9,
+      "base": 377,
+      "pct": 2.4,
+      "ci_low": 1.3,
+      "ci_high": 4.5,
+      "margin": 1.6,
+      "note": ""
+    },
+    "no_robots": {
+      "label": "No robots.txt at all",
+      "count": 28,
+      "base": 377,
+      "pct": 7.4,
+      "ci_low": 5.2,
+      "ci_high": 10.5,
+      "margin": 2.6,
+      "note": ""
+    },
+    "no_gbp": {
+      "label": "No Google Business Profile found",
+      "count": 1913,
+      "base": 2487,
+      "pct": 76.9,
+      "ci_low": 75.2,
+      "ci_high": 78.5,
+      "margin": 1.6,
+      "note": "Registered entities with no matching Maps listing. Includes businesses trading under a name unlike their registered name."
+    },
+    "no_reviews": {
+      "label": "Fewer than 10 Google reviews",
+      "count": 316,
+      "base": 574,
+      "pct": 55.1,
+      "ci_low": 51.0,
+      "ci_high": 59.1,
+      "margin": 4.1,
+      "note": ""
+    }
+  },
+  "median_ttfb_ms": 622,
+  "platforms": {
+    "WordPress": 133,
+    "Custom / unidentified": 121,
+    "Wix": 52,
+    "Squarespace": 46,
+    "Shopify": 10,
+    "Weebly": 8,
+    "GoDaddy Builder": 7
+  },
+  "schema_types": {
+    "WebSite": 194,
+    "SearchAction": 103,
+    "Organization": 96,
+    "WebPage": 87,
+    "ListItem": 82,
+    "BreadcrumbList": 80,
+    "PostalAddress": 76,
+    "LocalBusiness": 75,
+    "EntryPoint": 71,
+    "ImageObject": 70,
+    "ReadAction": 63,
+    "PropertyValueSpecification": 58
+  },
+  "by_locality": {
+    "Richmond": {
+      "label": "No website \u2014 Richmond",
+      "count": 64,
+      "base": 204,
+      "pct": 31.4,
+      "ci_low": 25.4,
+      "ci_high": 38.0,
+      "margin": 6.3,
+      "note": ""
+    },
+    "Henrico": {
+      "label": "No website \u2014 Henrico",
+      "count": 64,
+      "base": 157,
+      "pct": 40.8,
+      "ci_low": 33.4,
+      "ci_high": 48.6,
+      "margin": 7.6,
+      "note": ""
+    },
+    "Chesterfield": {
+      "label": "No website \u2014 Chesterfield",
+      "count": 44,
+      "base": 156,
+      "pct": 28.2,
+      "ci_low": 21.7,
+      "ci_high": 35.7,
+      "margin": 7.0,
+      "note": ""
+    },
+    "Hanover": {
+      "label": "No website \u2014 Hanover",
+      "count": 18,
+      "base": 57,
+      "pct": 31.6,
+      "ci_low": 21.0,
+      "ci_high": 44.5,
+      "margin": 11.8,
+      "note": ""
+    }
+  }
+}

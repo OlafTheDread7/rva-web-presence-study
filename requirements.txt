@@ -1,0 +1,6 @@
+# Exact versions, so the dependency audit can check them
+requests==2.34.2
+urllib3==2.8.0
+idna==3.20
+certifi==2026.10.23
+charset-normalizer==3.5.1
