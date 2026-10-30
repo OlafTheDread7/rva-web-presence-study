@@ -1,26 +1,28 @@
 # rva-web-presence-study
 
-How many small businesses around Richmond, Virginia have no website at all? Nobody had published a real number, so I measured it.
+How many small businesses around Richmond, Virginia have no website? I couldn't find a published number, so I measured it.
 
 **About a third.** In a random sample of active registered businesses in Richmond, Henrico, Chesterfield and Hanover, 33.1% of the customer-facing ones had no website (95% interval 29.4% to 37.1%, 574 businesses). Henrico was highest at 40.8%.
 
 ![No website at all, by locality, with 95% confidence intervals](docs/chart-no-website-by-locality.png)
 
-This repo is the pipeline and the aggregate results. The full report, the methodology page and the business-level dataset are published at [data.rvadigitalworks.com](https://data.rvadigitalworks.com) by my web design business, RVA Digital Works.
+This repo has the pipeline and aggregate results from my study of small business websites. The full report, methodology page and business-level dataset are published at [data.rvadigitalworks.com](https://data.rvadigitalworks.com) by my web design business, RVA Digital Works.
 
 ## Why a random sample
 
-The easy shortcut was the prospecting database I already had for finding clients. That would have produced a badly inflated number, because a lead list is built to surface businesses that look underserved. So this draws from the whole state business registry instead, with a published random seed, so anyone can draw the identical sample and check the work.
+I already had a prospecting database for finding clients. Using it would have badly inflated the result. A lead list is built to find businesses that look underserved.
+
+I used the whole state business registry instead. The random seed is published so anyone can draw the same sample and check my work.
 
 ## Method
 
-1. **Sampling frame.** Every active corporation and LLC registered in Richmond city, Henrico, Chesterfield and Hanover, pulled from Virginia's State Corporation Commission files on [data.virginia.gov](https://data.virginia.gov). The same business in both files is kept once. 46,543 entities.
+1. **Sampling frame.** Every active corporation and LLC registered in Richmond city, Henrico, Chesterfield and Hanover, pulled from Virginia's State Corporation Commission files on [data.virginia.gov](https://data.virginia.gov). A business in both files is kept once. 46,543 entities.
 2. **Exclusions, before sampling.** Holding companies, single-property LLCs, trusts, churches, foundations, HOAs and condo associations, by name. 3,074 excluded, each reason counted and published. 43,469 eligible.
 3. **Sample.** 2,500 drawn with `random.Random(20260825)` from the eligible list in a fixed sort order. The seed is the run date.
-4. **Customer-facing screen.** Google Places looks each one up. A business with a Google Business Profile counts as customer-facing; that's the only signal in the data that separates a business with customers from a shell. 574 passed.
+4. **Customer-facing screen.** Google Places looks each business up. A business with a Google Business Profile counts as customer-facing. That's the only signal in the data that separates a business with customers from a shell. 574 passed.
 5. **Website, from two sources.** Places' website field, plus a domain probe that tries likely domains for the business name and only accepts one that proves it belongs to this business (name, address or phone on the page, not a parked page). "No website" means both looked and neither found one.
 6. **Site checks** on the 377 live sites: HTTPS, a mobile viewport, Schema.org structured data, `llms.txt`, robots.txt and whether it blocks AI crawlers, time to first byte, platform.
-7. **Statistics.** Every figure is a Wilson score interval at 95%, which behaves at small samples and near 0% or 100% where the textbook interval doesn't. Sectors and localities with fewer than 30 businesses aren't reported.
+7. **Statistics.** Every figure is a Wilson score interval at 95%. It works at small samples and near 0% or 100%, where the textbook interval doesn't. Sectors and localities with fewer than 30 businesses aren't reported.
 
 ## Findings (2026 edition)
 
@@ -62,7 +64,9 @@ python run.py --audit                                # the run that matters
 python findings.py                                   # the table above, from your run
 ```
 
-The sample step only needs the public registry. The audit needs a Google Places (New) key, and Google bills those lookups: about one text search per sampled business. Without a key the audit still finishes, but there's no customer-facing screen and no Business Profile figure, so every number is marked provisional. Set `STUDY_USER_AGENT` so the sites you probe can see who's asking.
+The sample step only needs the public registry. The audit needs a Google Places (New) key. Google bills those lookups: about one text search per sampled business.
+
+Without a key, the audit still finishes, but there's no customer-facing screen and no Business Profile figure. Every number is marked provisional. Set `STUDY_USER_AGENT` so the sites you probe can see who's asking.
 
 `data/sample.json`, `data/audited.json` and the CSV are written locally and stay out of git. They hold business names and registered agents.
 
@@ -72,13 +76,13 @@ The sample step only needs the public registry. The audit needs a Google Places 
 python -m unittest discover -s tests -v
 ```
 
-They check the parts that don't touch the network: the Wilson intervals (including that they reproduce the published 33.1% and 40.8%), the exclusions, that the same seed draws the same sample in any input order, the statistics on made-up records, the domain guesses and the Schema.org reader.
+The tests don't touch the network. They check the Wilson intervals (including that they reproduce the published 33.1% and 40.8%), the exclusions, that the same seed draws the same sample in any input order, the statistics on made-up records, the domain guesses and the Schema.org reader.
 
 ## Limits
 
-- **Registered name isn't trading name.** A business that trades under a different name can miss its Maps listing. That's most of why "no Google Business Profile" is so high, and those businesses drop out of the customer-facing base.
+- **Registered name isn't trading name.** A business that trades under a different name can miss its Maps listing. That's most of why "no Google Business Profile" is so high. Those businesses drop out of the customer-facing base.
 - **The screen leans on Google.** Customer-facing means "has a Business Profile". A real business with no profile isn't in the base.
-- **The probe is strict on purpose.** It only accepts a domain that proves it belongs to the business, so a site that never names its business or address can be missed.
+- **The probe is strict on purpose.** It only accepts a domain that proves it belongs to the business. A site that never names its business or address can be missed.
 - **One snapshot.** August 2026. The next edition re-runs with a new seed so the change over time can be measured.
 
 ## License
